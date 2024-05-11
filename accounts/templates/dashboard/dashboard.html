@@ -1,0 +1,41 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="main-panel">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-sm-12 mb-4 mb-xl-0">
+          <h4 class="font-weight-bold text-dark">Hi {{user.username}}, welcome back!</h4>
+          <p>{% include 'alert.html' %}</p>
+          
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="col-sm-12 grid-margin stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Total Product</h4>
+                      <h4 class="text-dark font-weight-bold mb-2">{{count}}</h4>
+                      
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="col-sm-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Total Request</h4>
+                      
+                      <h4 class="text-dark font-weight-bold mb-2">{{count_receipt}}</h4>
+                      
+                  </div>
+                </div>
+           </div>
+        </div>
+      </div>
+    
+{% endblock content %}
+    

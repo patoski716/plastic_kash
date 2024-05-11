@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Inner Heading Start -->
+<div class="innerHeading-wrap">
+    <div class="container">
+      <h1>Contact Us</h1>
+    </div>
+  </div>
+  <!-- Inner Heading End --> 
+  
+  <!-- Inner Content Start -->
+  <div class="innerContent-wrap">
+    <div class="container">
+      <div class="getTouch">Get In Touch</div>
+      <p>{% include 'alert.html' %}</p>
+      <div class="row formcol">
+        <div class="col-lg-8">
+          <form  method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+            <div class="messages"></div>
+            <div class="controls">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group has-error has-danger">
+                    <input id="form_name" class="form-control" type="text" name="name" placeholder="Name" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input id="form_email" class="form-control" type="email" name="email" placeholder="Email" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input id="form_phone" class="form-control" type="text" name="phone" placeholder="Phone" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input id="form_subject" class="form-control" type="text" name="subject" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <textarea id="form_message" class="form-control" name="message" placeholder="Message" rows="4" required></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-12 contact-wrap">
+                  <div class="contact-btn">
+                    <button type="submit" class="sub">Submit Now <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- Inner Content End --> 
+    
+{% endblock content %}
+    

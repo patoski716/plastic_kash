@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Blog Start -->
+<div class="blog-section blog-wrap">
+    <div class="container">
+      <div class="title">
+        <h1>Our <span>Product</span></h1>
+        <p>Together, we can reshape the future of plastic consumption.</p>
+      </div>
+      <div class="row">         
+        <!-- News Block One -->
+        <div class="news-block-one col-lg-4">
+          <div class="inner-box">
+            <div class="image"> <img src="{% static 'images/blog/blog02.jpg' %}" alt=""> <a class="overlay" href="blog-details.html"></a> </div>
+            <div class="lower-content">
+              <div class="date">22 <br>
+                </div>
+              <ul class="post-meta">
+                <li><a href="#">EcoPlast Inc. </a></li>
+                <li><a href="#">EcoPlast@gmai.com</a></li>
+              </ul>
+              <h3><a href="blog-details.html">EcoPlast Inc.</a></h3>
+              <div class="text">EcoPlast Inc. offers premium-grade HDPE pellets, perfect for injection molding, extrusion... <a href="" class="text-danger">Read more</a> </div>
+            </div>
+          </div>
+        </div>
+        <!-- News Block One -->
+        
+      </div>
+    </div>
+  </div>
+  <!-- Blog Start --> 
+    
+{% endblock content %}
+    

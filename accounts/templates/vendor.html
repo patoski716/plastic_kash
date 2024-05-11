@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="main-panel">        
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Please Complete your Profile if you have done that already please go to your dashboard</h4>
+              <p>{% include 'alert.html' %}</p>
+              <p class="card-description">
+                Enter the information correctly
+              </p>
+                <form action="" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{form | crispy}}
+                    <input type="submit" class="btn btn-danger" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+    
+{% endblock content %}
+    

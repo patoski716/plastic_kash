@@ -1,0 +1,74 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <!-- Required meta tags --> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Plasickash Admin</title>
+  <!-- base:css -->
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/mdi/css/materialdesignicons.min.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/feather/feather.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/base/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/flag-icon-css/css/flag-icon.min.css' %}"/>
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/font-awesome/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/jquery-bar-rating/fontawesome-stars-o.css' %}">
+  <link rel="stylesheet" href="{% static 'dashboard/vendors/jquery-bar-rating/fontawesome-stars.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'dashboard/css/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'assets/img/logo/logo.png' %}" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+</head>
+</head>
+<body>
+  <script>
+    document
+      .getElementById("generate")
+      .addEventListener("click", function () {
+        html2canvas(document.getElementById("spato"), {
+          onrendered: function (canvas) {
+            var img = canvas.toDataURL();
+            var link = document.createElement("a");
+            link.href = img;
+            link.download = "receipt.png";
+            link.click();
+          },
+        });
+      });
+  </script>
+  <div class="container-scroller">
+    {% include 'dashboard/navbar.html' %}
+        <div class="container-fluid page-body-wrapper">
+    {% include 'dashboard/sidebar.html' %}
+    {% block content %}
+        
+    {% endblock content %}
+    
+        </div>
+    </div>
+
+    <!-- base:js -->
+  <script src="{% static 'dashboard/vendors/base/vendor.bundle.base.js' %}"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="{% static 'dashboard/js/off-canvas.js' %}"></script>
+  <script src="{% static 'dashboard/js/hoverable-collapse.js' %}"></script>
+  <script src="{% static 'dashboard/js/template.js' %}"></script>
+  <!-- endinject -->
+  <!-- plugin js for this page -->
+  <script src="{% static 'dashboard/vendors/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'dashboard/vendors/jquery-bar-rating/jquery.barrating.min.js' %}"></script>
+  <!-- End plugin js for this page -->
+  <!-- Custom js for this page-->
+  <script src="{% static 'dashboard/js/dashboard.js' %}"></script>
+  <!-- End custom js for this page-->
+</body>
+</html>
+        

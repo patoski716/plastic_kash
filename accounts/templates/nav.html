@@ -1,0 +1,67 @@
+{% load static %}
+<!--Topbar Start-->
+<div class="topbar-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
+          <p>Welcome to Palstic Kash</p>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="social-media"> <span>Follow Us</span>
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Topbar End--> 
+  
+  <!--Header Start-->
+  <div class="header-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 col-md-4">
+          <div class="logo"><h2>PLASTIC <span style="color: #FF5E14;">KASH</span></h2></div>
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <ul class="headInfo">
+            <li>
+              <div class="conInfo email"><span>Email</span> <a href="#">info@plastickash.com</a></div>
+            </li>
+            <li>
+              <div class="conInfo phone"><span>Call Now</span> <a href="#">08167000077</a></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light"> <a class="navbar-brand" href="#"><h2>PLASTIC KASH</h2></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'product' %}">Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a></li>
+            
+          </ul>
+          <div class="quoteWrp"><a class="nav-link" href="{% url 'logout' %}"> Logout </a></div>
+
+            {% else %}
+            <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+
+        </ul>
+        <div class="quoteWrp"><a class="nav-link" href="{% url 'register' %}"> Signup as Vendor </a></div>
+            {% endif %}
+            
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!--Header End--> 

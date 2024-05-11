@@ -1,0 +1,48 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Cash</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'rs-plugin/css/settings.css' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+<style>
+    .bg-primary{
+        background: #FF5E14 !important;
+    }
+
+    .btn-primary{
+        background: #FF5E14 !important;
+        border-color: #FF5E14;
+    }
+</style>
+
+    {% include 'nav.html' %}
+    {% block content %}
+        
+    {% endblock content %}
+    {% include 'footer.html' %}
+        
+    
+<!-- Optional JavaScript --> 
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script> 
+<script src="{% static 'js/popper.min.js' %}"></script> 
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+<!-- Include all compiled plugins (below), or include individual files owl.carousel.js as needed --> 
+<script src="{% static 'js/bootstrap.min.js' %}"></script> 
+<script src="{% static 'rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script> 
+<script src="{% static 'rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script> 
+<!-- general script file --> 
+<script src="{% static 'js/owl.carousel.js' %}"></script> 
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+
+<!-- Mirrored from www.malikhassan.com/html/esoxspec/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 09 May 2024 19:44:40 GMT -->
+</html>
